@@ -1,12 +1,20 @@
-# docx-placeholder-replacer-4j
-Replaces placeholders in docx documents. Based on "apache poi" library
+package io.github.ilyakastsenevich.docxplaceholderreplacer4j.impl;
 
-## template -> result:
-![input -> output example screenshot](docx_example.png)
+import io.github.ilyakastsenevich.docxplaceholderreplacer4j.dto.ReplacePlaceholdersInput;
+import io.github.ilyakastsenevich.docxplaceholderreplacer4j.dto.ReplacePlaceholdersInput.TextValue;
+import io.github.ilyakastsenevich.docxplaceholderreplacer4j.replacer.DocxPlaceholderReplacer;
+import org.junit.jupiter.api.Test;
 
-## code usage:
+import java.io.IOException;
 
-```java
+import static io.github.ilyakastsenevich.docxplaceholderreplacer4j.dto.ReplacePlaceholdersInput.TextValueFormat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class DocxPlaceholderReplacerImplTest {
+
+    @Test
+    void replacePlaceholders() throws IOException {
         //your docx template byte[]
         byte[] docxDocument = this.getClass().getClassLoader().getResourceAsStream("test_placeholders.docx").readAllBytes();
 
@@ -43,4 +51,11 @@ Replaces placeholders in docx documents. Based on "apache poi" library
         DocxPlaceholderReplacer replacer = DocxPlaceholderReplacer.getInstance();
         //call service's replace method and pass input object
         byte[] resultDocx = replacer.replacePlaceholders(input);
-```
+
+        assertNotNull(resultDocx);
+        assertTrue(resultDocx.length > 0);
+
+//        File outputFile = new File("src/test/resources/result.docx");
+//        Files.write(outputFile.toPath(), resultDocx);
+    }
+}
