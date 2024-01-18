@@ -1,11 +1,26 @@
 # docx-placeholder-replacer-4j
-Replaces placeholders in docx documents. Based on "apache poi" library
+Replaces placeholders in docx document. Based on "apache poi" library.
 
 ## template -> result:
 ![input -> output example screenshot](docx_example.png)
 
-## code usage:
+## add to project:
 
+Maven:
+```xml
+<dependency>
+    <groupId>io.github.ilyakastsenevich</groupId>
+    <artifactId>docx-placeholder-replacer-4j</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+Gradle:
+```groovy
+implementation 'io.github.ilyakastsenevich:docx-placeholder-replacer-4j:1.0.0'
+```
+
+## code example:
 ```java
         //your docx template byte[]
         byte[] docxDocument = this.getClass().getClassLoader().getResourceAsStream("test_placeholders.docx").readAllBytes();
