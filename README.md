@@ -1,8 +1,6 @@
 # docx-placeholder-replacer-4j
 Replaces placeholders in docx document. Based on "apache poi" library.
 
-## template -> result:
-![input -> output example screenshot](docx_example.png)
 
 ## add to project:
 
@@ -59,3 +57,5 @@ implementation 'io.github.ilyakastsenevich:docx-placeholder-replacer-4j:1.0.0'
         //call service's replace method and pass input object
         byte[] resultDocx = replacer.replacePlaceholders(input);
 ```
+## template -> result:
+![input -> output example screenshot](docx_example.png)
