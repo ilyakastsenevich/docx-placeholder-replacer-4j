@@ -9,13 +9,13 @@ Maven:
 <dependency>
     <groupId>io.github.ilyakastsenevich</groupId>
     <artifactId>docx-placeholder-replacer-4j</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
 Gradle:
 ```groovy
-implementation 'io.github.ilyakastsenevich:docx-placeholder-replacer-4j:1.0.0'
+implementation 'io.github.ilyakastsenevich:docx-placeholder-replacer-4j:1.0.1'
 ```
 
 ## code example:
