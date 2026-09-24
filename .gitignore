@@ -1,4 +1,5 @@
 target/
+.DS_Store
 
 ### STS ###
 .apt_generated
@@ -23,7 +24,5 @@ nbdist/
 .nb-gradle/
 
 ### MVN ###
-/.mvn/
-/.mvn/wrapper/maven-wrapper.properties
 /.mvn/wrapper/maven-wrapper.jar
 *.versionsBackup
